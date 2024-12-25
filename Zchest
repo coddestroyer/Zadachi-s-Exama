@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+from scipy.optimize import fsolve
+import numpy as np
+import random
+from random import *
+myList = [round(random() + randint(-1000, 1000), 2) for i in range(100)]
+myList = sorted(myList)
+myInt = 5
+newList = [x%myInt for x in myList]
+print(newList)
+x=myList
+y=newList
+plt.plot(x,y,color='blue')
+plt.grid(True)
+plt.xlabel("значения x")
+plt.ylabel("значения y")
+plt.legend()
+plt.show()
